@@ -1,2 +1,2 @@
 # DS-Algo
-Repository for Codes of Data Structures and Algorithms
+Repository for Codes of Data Structures and Algorithms.
