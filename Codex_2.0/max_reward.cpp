@@ -15,8 +15,10 @@ vector<int> topological_sort(int nodes, vector<vector<int>> adj){
 
 	vector<int> sorted;
 	queue<int> q;
-	for(int i: indegree){
-		if(i==0) q.push(i);
+	for(int i=0; i < nodes; i++){
+		if(indegree[i]==0){
+			q.push(i);
+		}
 	}
 	
 	while(!q.empty()){
@@ -29,7 +31,6 @@ vector<int> topological_sort(int nodes, vector<vector<int>> adj){
 				q.push(nbr);
 			}
 		}
-		
 	}
 	return sorted;
 }
@@ -44,7 +45,7 @@ int getAllPaths(int nodes, vector<vector<int>> adj){
 	// adding number of ways to reach out all parents for each node and will return number of ways for last node.
 	for(int i: topological_order){
 		if(i==(nodes-1)) break;		// once we traverse all parent nodes of last node.
-		for(int nbr: adj[i]){
+		for(int nbr: adj[i]){	   // after this point there won't be any node which has incoming edge in last node.
 			ways[nbr] = ways[nbr] + ways[i];
 		}
 	}

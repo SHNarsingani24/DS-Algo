@@ -17,7 +17,7 @@ bool divisibilityTest(string num){
 		digiSum = digiSum + atoi(&temp);
 	}
 
-	// Hence if digit sum is divisible by 3, we will return true. otherwise false.
+	// Hence if digit sum is divisible by 3, we will return true, otherwise false.
 	return !(digiSum%3);
 }
 

@@ -46,7 +46,7 @@ int getMaxPoints(vector<int>winner, vector<int>scores){
 		int temp1 = prefix_sum[0][i] + suffix_sum[1][i+1];
 		if(temp1 > op1) op1 = temp1;
 
-		// OP2: firs i rounds are flipped.
+		// OP2: first i rounds are flipped.
 		int temp2 = prefix_sum[1][i] + suffix_sum[0][i+1];
 		if(temp2 > op2) op2 = temp2;
 	}
