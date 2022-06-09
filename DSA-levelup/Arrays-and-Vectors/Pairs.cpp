@@ -9,7 +9,7 @@
 using namespace std;
 
 // brute force approach.
-// Time Complexity: O(N).
+// Time Complexity: O(N^2).
 pair<int, int> brute_force(vector<int> arr, int target){
     for(int i=0; i<arr.size()-1; i++){
         for(int j=i+1; j<arr.size(); j++){
